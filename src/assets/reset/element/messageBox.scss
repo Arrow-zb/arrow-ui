@@ -1,0 +1,17 @@
+.el-message-box.ai-message-box{
+	&.el-message-box--center{
+		padding-bottom: 40px;
+		.el-message-box__header{
+			padding-top: 40px;
+		}
+		.el-message-box__btns{
+			padding-top: 30px;
+		}
+		.el-button.el-button--default.el-button--small.el-button--primary.error {
+			background-color: #FB6664;
+			border-color:#FB6664;
+		}
+		
+    }
+    
+}

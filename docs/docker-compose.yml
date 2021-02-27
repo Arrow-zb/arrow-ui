@@ -1,0 +1,9 @@
+version: '2'
+services:
+  ARROW:
+    image: nginx
+    ports:
+      - "6096:80"
+    volumes:
+      - "./docs/.vuepress/dist:/usr/share/nginx/html"  
+    restart: always

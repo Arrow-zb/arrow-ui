@@ -1,0 +1,72 @@
+{
+  "name": "arrow-ui",
+  "version": "0.0.1",
+  "description": "A Component Library for ARROW",
+  "main": "lib/arrow-ui.common.js",
+  "private": true,
+  "files": [
+    "lib",
+    "src",
+    "packages"
+  ],
+  "scripts": {
+    "bootstrap": "yarn || npm i",
+    "build:file": "node build/bin/build-entry.js",
+    "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
+    "clean": "rimraf lib && rimraf packages/*/lib",
+    "build": "npm run bootstrap && npm run clean && npm run build:file && webpack --config build/webpack.config.js && cp-cli vendor lib",
+    "docs:dev": "npm run build && cd docs && npm run docs:dev",
+    "docs:build": "npm run build && cd docs && npm run docs:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arrow-zb/arrow-ui.git"
+  },
+  "keywords": [
+    "arrow-ui",
+    "arrow",
+    "component"
+  ],
+  "bugs": {
+    "url": "https://github.com/Arrow-zb/arrow-ui.git"
+  },
+  "author": "arrow",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "cp-cli": "^2.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "json-templater": "^1.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "uppercamelcase": "^3.0.0",
+    "url-loader": "^4.1.0",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.19",
+    "plyr": "^3.6.2",
+    "store2": "^2.11.2",
+    "throttle-debounce": "^1.0.1",
+    "vue-clipboard2": "^0.3.1"
+  }
+}
