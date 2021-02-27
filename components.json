@@ -1,4 +1,4 @@
 {
-  "ai-input-group": "packages/ai-input-group/index.js",
+  "arrow-input-group": "packages/arrow-input-group/index.js",
   "alert": "packages/alert/index.js"
 }

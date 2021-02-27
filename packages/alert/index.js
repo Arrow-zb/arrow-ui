@@ -1,4 +1,4 @@
-import Index from './src/packaging.js'
+import Index from './src/index.vue'
 
 Index.install = function(Vue) {
   Vue.prototype.Alert = Index
