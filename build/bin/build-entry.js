@@ -44,7 +44,7 @@ import VueClipboard from 'vue-clipboard2'
 // 样式文件
 import 'plyr/dist/plyr.css'
 
-import "./assets/iconfont/iconfont.js";
+// import "./assets/iconfont/iconfont.js";
 import "./assets/reset/index.scss";
 
 const components = [
